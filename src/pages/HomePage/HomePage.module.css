@@ -1,0 +1,40 @@
+.hero {
+  background: rgba(0, 0, 0, 0.2);
+  background-image: url(/public/img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.btn {
+  border-radius: 12px;
+  border: none;
+  width: 276px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fff;
+  background-color: #3470ff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

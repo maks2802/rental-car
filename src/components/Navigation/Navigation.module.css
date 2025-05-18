@@ -1,0 +1,13 @@
+.nav {
+  padding-right: 120px;
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #101828;
+}
