@@ -1,0 +1,92 @@
+.form {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.selectContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #8d929a;
+}
+
+.select {
+  border-radius: 12px;
+  padding: 12px 16px;
+  width: 204px;
+  height: 44px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 16px;
+}
+
+.mileageContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.mileageContainer label {
+  font-size: 0.8em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.inputContainer {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.input.from {
+  border-right: 1px solid #ccc;
+}
+
+.input.to {
+  border-left: 1px solid #ccc;
+}
+
+.mileageSeparator {
+  width: 1px;
+  background-color: #ccc;
+}
+
+.btn {
+  border-radius: 12px;
+  border: none;
+  width: 156px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fff;
+  background-color: #3470ff;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px 15px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #0b44cd;
+}

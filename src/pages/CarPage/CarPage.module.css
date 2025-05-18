@@ -1,0 +1,130 @@
+.car-page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.5;
+}
+
+.top-section {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.car-image {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.car-info {
+  flex-grow: 1;
+}
+
+.car-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.car-info h2 span {
+  font-weight: normal;
+  color: #666;
+}
+
+.car-info .car-id {
+  font-size: 14px;
+  color: #777;
+  margin-left: 10px;
+}
+
+.car-info p {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.car-info .price {
+  font-size: 28px;
+  color: #007bff;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.car-info h3 {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.car-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.car-info ul li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.car-info ul li::before {
+  content: "✔️ ";
+  color: #28a745;
+}
+
+.booking-form {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.booking-form p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.booking-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.booking-form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}

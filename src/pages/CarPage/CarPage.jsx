@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCarById } from "../../redux/operations";
 import { clearSelectedCar } from "../../redux/slice";
 import { selectSelectedCar, selectCarsLoading } from "../../redux/selectors";
+import s from "./CarPage.module.css";
 
 const CarPage = () => {
   const { id } = useParams();
@@ -20,23 +21,25 @@ const CarPage = () => {
 
   if (isLoading || !car) return <p>Loading car details...</p>;
 
+  const shortId = car.id ? String(car.id).slice(0, 4) : "";
+
   return (
-    <div className="car-page-container">
-      <div className="top-section">
-        <img src={car.img} alt={car.brand} className="car-image" />
-        <div className="car-info">
+    <div className={s["car-page-container"]}>
+      <div className={s["top-section"]}>
+        <img src={car.img} alt={car.brand} className={s["car-image"]} />
+        <div className={s["car-info"]}>
           <h2>
             {car.brand}{" "}
             <span>
               {car.model}, {car.year}
             </span>{" "}
-            <span className="car-id">Id: {car.id}</span>
+            <span className={s["car-id"]}>Id: {shortId}</span>
           </h2>
           <p>
             {car.address} | Mileage: {car.mileage.toLocaleString()} km
           </p>
-          <p className="price">${car.rentalPrice}</p>
-          <p className="description">{car.description}</p>
+          <p className={s["price"]}>${car.rentalPrice}</p>
+          <p className={s["description"]}>{car.description}</p>
 
           <h3>Rental Conditions:</h3>
           <ul>
@@ -65,7 +68,7 @@ const CarPage = () => {
         </div>
       </div>
 
-      <div className="booking-form">
+      <div className={s["booking-form"]}>
         <h3>Book your car now</h3>
         <p>Stay connected! We are always ready to help you.</p>
         <form>

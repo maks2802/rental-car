@@ -11,3 +11,7 @@
   text-align: center;
   color: #101828;
 }
+
+.link.active {
+  color: #0b44cd;
+}

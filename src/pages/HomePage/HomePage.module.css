@@ -4,6 +4,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: calc(100vh - 68px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 204px;
+  position: absolute;
+  bottom: 60px;
 }
 
 .title {
@@ -37,4 +47,12 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 0;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #0b44cd;
 }

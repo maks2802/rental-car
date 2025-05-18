@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCars } from "../../redux/operations";
 import {
@@ -16,6 +16,7 @@ import {
 } from "../../redux/slice";
 import CarGallery from "../../components/CarGallery/CarGallery";
 import Filter from "../../components/Filter/Filter";
+import s from "./CatalogPage.module.css";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -24,10 +25,15 @@ const CatalogPage = () => {
   const page = useSelector(selectCarsPage);
   const isLoading = useSelector(selectCarsLoading);
   const favorites = useSelector(selectFavorites);
+  const [showLoadMore, setShowLoadMore] = useState(true);
 
   useEffect(() => {
     dispatch(initFavorites());
   }, [dispatch]);
+
+  useEffect(() => {
+    setShowLoadMore(true);
+  }, [cars]);
 
   useEffect(() => {
     dispatch(fetchCars());
@@ -46,8 +52,7 @@ const CatalogPage = () => {
   };
 
   return (
-    <div>
-      <h1>Catalog</h1>
+    <div className={s.container}>
       <Filter onChange={handleFilterChange} />
       {isLoading && <p>Loading...</p>}
       <CarGallery
@@ -55,7 +60,15 @@ const CatalogPage = () => {
         favorites={favorites}
         onFavoriteToggle={handleToggleFavorite}
       />
-      <button onClick={handleLoadMore}>Load More</button>
+      {isLoading && !showLoadMore && <p className={s.loading}>Loading...</p>}
+      {cars.length > 0 && !isLoading && showLoadMore && (
+        <button className={s.loadMore} onClick={handleLoadMore}>
+          Load More
+        </button>
+      )}
+      {cars.length === 0 && !isLoading && (
+        <p>No cars found matching your filters.</p>
+      )}
     </div>
   );
 };
